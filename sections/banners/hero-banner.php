@@ -1,150 +1,120 @@
 <?php 
-    $subtitle = get_sub_field('hero_sub_title');
     $title = get_sub_field('hero_title');
-    $hero_description = get_sub_field('hero_description');
-    $button_text = get_sub_field('hero_button_text');
-    $button_link = get_sub_field('hero_button_link');
-    $number_info = get_sub_field('hero_number_info');
+    $intro_content = get_sub_field('intro_content');
+    $btn_text = get_sub_field('btn_text');
+    $btn_link = get_sub_field('btn_link');
     $card_info = get_sub_field('card_info');
-    $bg_image_left = get_sub_field('background_image_left');
-    $bg_image_right = get_sub_field('background_image_right');
+    $bg_img = get_sub_field('bg_img');
+
+    $bg_img['alt'] === "" ? $bg_img['alt'] = "QDN" : "";
 ?>
 
-<section class="hero primary-bg">
+<section class="hero">
+    <div class="wrapper">
+        <row class="row row-medium-flex">
 
-    <?php if(!empty($bg_image_left)): ?>
+            <!-- Content Col -->
+            <div class="col col-medium-6">
+                <div class="hero__content">
 
-        <?php 
-            $bg_image_left['alt'] == "" ? $bg_image_left["alt"] = "ThuocVang" : ""; 
-        ?>
-
-        <picture>
-            <img class="plan lazy entered loaded"
-                src="<?php echo esc_url($bg_image_left['url']); ?>" alt="<?php echo esc_attr($bg_image_left['alt']); ?>" data-role="deco" data-ll-status="loaded" />
-        </picture>
-
-    <?php endif; ?>
-
-    <div class="container hero_container d-md-flex flex-wrap justify-content-between">
-
-        <?php if(!empty($bg_image_right)): ?>
-
-            <?php 
-                $bg_image_right['alt'] == "" ? $bg_image_right["alt"] = "ThuocVang" : ""; 
-            ?>
-
-            <picture>
-                <img class="hero_building lazy entered loaded" src="<?php echo esc_url($bg_image_right['url']); ?>" alt="<?php echo esc_attr($bg_image_right['alt']); ?>" data-role="deco" data-ll-status="loaded" />
-            </picture>
-
-        <?php endif; ?>
-
-        <!-- HEADING -->
-        <div class="hero_header section_header col-md-7 col-xl-auto">
-
-            <?php if(!empty($subtitle)): ?>
-                <span class="subtitle subtitle--extended"><?php echo esc_html($subtitle); ?></span>
-            <?php endif; ?>
-
-            <?php if(!empty($title)): ?>
-                <h1 class="title"><?php echo esc_html($title); ?></h1>
-            <?php endif; ?>
-
-            <?php if(!empty($hero_description)): ?>
-                <p class="text">
-                    <?php echo esc_html($title); ?> 
-                </p>
-            <?php endif; ?>
-
-            <?php if(!empty($button_text) && !empty($button_link)): ?>
-                <a class="btn" href="<?php echo esc_url($button_link); ?> "><?php echo esc_html($button_text); ?> </a>
-            <?php endif; ?>
-
-        </div>
-        <!-- END HEADING -->
-
-        <div class="hero_info d-flex flex-column col-md-5 col-xl-auto align-items-md-end">
-
-            <?php if(!empty($number_info)): ?>
-
-                <div class="hero_info-numbers d-flex flex-wrap align-items-start justify-content-sm-center justify-content-md-between flex-grow-1">
-
-                    <?php foreach ($number_info as $item): ?>
-
-                        <?php 
-                            if(!empty($item)) {
-                                $number = $item['number'];
-                                $label = $item['label'];
-                            }
-                        ?>
-
-                        <div class="hero_info-numbers_group d-flex flex-column align-items-start align-items-md-end col-6 col-sm-auto col-md-12">
-                            <h2 class="countNum number"><?php echo esc_html($number); ?></h2>
-                            <span class="label"><?php echo $label; ?></span>
-                        </div>
-
-                    <?php endforeach; ?>
-
-                </div>
-
-            <?php endif; ?>
-
-            <!-- CARD INFO -->
-            <?php if(!empty($card_info)): ?>
-
-                <?php 
-                    $title_card = $card_info['title_card'];
-                    $square = $card_info['square'];
-                    $card_status = $card_info['card_status'];
-                    $button_text = $card_info['button_text'];
-                    $button_link = $card_info['button_link'];
+                    <?php if(!empty($title)): ?>
                     
-                ?>
-
-                <div class="hero_info-card">
-                    <span class="hero_info-card_underlay"></span>
-
-                    <div class="wrapper">
-
-                        <?php if(!empty($title_card)): ?>
-                            <h3 class="title"><?php echo esc_html($title_card); ?></h3>
-                        <?php endif; ?>
-
-                        <?php if(!empty($square)): ?>
-                            <span class="square highlight d-flex align-items-center"><?php echo esc_html($square); ?><sup>2</sup></span>
-                        <?php endif; ?>
-
-                        <?php if(!empty($card_status)): ?>
-                            <span class="info"><?php echo esc_html($card_status); ?></span>
-                        <?php endif; ?>
-
-                        <?php if(!empty($button_text) && !empty($button_link)): ?>
-                            <a class="link link-arrow"
-                                href="<?php echo esc_url($button_link); ?>">
-                                <?php echo esc_html($button_text); ?>
-                                <i class="icon-arrow_right"></i>
-                            </a>
-                        <?php endif; ?>
-
-                    </div>
-
-                    <!-- BG RIGHT -->
-                    <?php if(!empty($bg_image_right)): ?>
-
-                        <?php 
-                            $bg_image_right['alt'] == "" ? $bg_image_right["alt"] = "ThuocVang" : ""; 
-                        ?>
-
-                        <picture>
-                            <img class="hero_building--mini lazy entered loaded" src="<?php echo esc_url($bg_image_right['url']); ?>" alt="<?php echo esc_attr($bg_image_right['alt']); ?>" data-role="deco" data-ll-status="loaded" />
-                        </picture>
+                        <h2 class="hero__heading">
+                            <?php echo $title; ?>
+                        </h2>
 
                     <?php endif; ?>
-                    <!-- END BG RIGHT -->
+
+                    <?php if(!empty($intro_content)): ?>
+
+                        <div class="row">
+                            <div class="col col-smallest-12 col-wide-10">
+                                <div class="hero__intro">
+
+                                    <?php foreach($intro_content as $item): ?>
+
+                                        <?php 
+                                            $intro_icon  = $item['icon'];
+                                            $intro_title  = $item['title'];
+                                            $intro_desc  = $item['description'];
+
+                                            $intro_icon['alt'] === "" ? $intro_icon['alt'] = "QDN" : "";
+                                        ?>
+
+                                        <div class="hero__intro-box">
+                                            
+                                            <?php if(!empty($intro_icon)): ?>
+
+                                                <div class="hero__icon">
+                                                    <picture>
+
+                                                        <img src="<?php echo esc_url($intro_icon['url']) ?>" alt="<?php echo esc_attr($intro_icon['alt']) ?>">
+
+                                                    </picture>
+                                                </div>
+                                                
+                                            <?php endif; ?>
+
+                                            <div class="hero__intro-detail">
+
+                                                <?php if(!empty($intro_title)): ?>
+                                                    <h3 class="hero__intro-title">
+                                                        <?php echo esc_html($intro_title) ?>
+                                                    </h3>
+                                                <?php endif; ?>
+
+
+                                                <?php if(!empty($intro_desc)): ?>
+                                                    <p class="hero__intro-desc">
+                                                        <?php echo esc_html($intro_desc) ?>
+                                                    </p>
+                                                <?php endif; ?>
+
+                                            </div>
+                                        </div>
+
+                                    <?php endforeach; ?>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php endif ?>
+
+
+                    <?php if(!empty($btn_text) && !empty($btn_link)): ?>
+
+                        <div class="hero__btn">
+                            <a href="<?php echo esc_url($btn_link) ?>" class="btn btn--primary btn--sm">
+                                <?php echo esc_html($btn_text) ?>
+                            </a>
+                        </div>
+
+                    <?php endif ?>
 
                 </div>
-            <?php endif; ?>
-            <!-- END CARD INFO -->
-        </div>
+            </div>
+            <!-- End Content Col -->
+
+            
+            <!-- Background Image -->
+            <div class="col col-medium-6 no-padding">
+
+                <?php if(!empty($bg_img)): ?>
+
+                    <div class="hero__ilustration">
+                        <picture>
+
+                            <img src="<?php echo esc_url($bg_img['url']) ?>" alt="<?php echo esc_attr($bg_img['alt']) ?>" />
+
+                        </picture>
+                    </div>
+
+                <?php endif ?>
+
+            </div>
+            <!-- End Background Image -->
+
+        </row>
     </div>
 </section>
