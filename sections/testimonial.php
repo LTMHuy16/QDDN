@@ -65,7 +65,7 @@
                                     <div class="testimonial__icon">
                                         <picture>
 
-                                            <img src="<?php echo esc_url($mess_icon['url']) ?>" alt="<?php echo esc_attr($mess_icon['alt']) ?>">
+                                            <img src="<?php echo esc_url($mess_icon['url']) ?>" alt="<?php echo esc_attr($mess_icon['alt']) ?>"  width="100%" height="auto" />
 
                                         </picture>
                                     </div>

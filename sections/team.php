@@ -64,7 +64,7 @@
                             
                                 <figure class="team__img">
 
-                                    <img src="<?php echo esc_url($portrait['url']) ?>" alt="<?php echo esc_attr($portrait['alt']) ?>" />
+                                    <img src="<?php echo esc_url($portrait['url']) ?>" alt="<?php echo esc_attr($portrait['alt']) ?>"  width="100%" height="auto" />
 
                                 </figure>
 

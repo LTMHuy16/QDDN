@@ -37,11 +37,15 @@
             <nav class="header__nav">
 
                 <?php if(!empty($header_logo) && !empty($header_logo_link)): ?>
+
                     <a href="<?php echo esc_url($header_logo_link['url']); ?>" class="header__logo">
+
                         <picture>
-                            <img src="<?php echo esc_url($header_logo['url']); ?>" alt="<?php echo esc_attr($header_logo['alt']); ?>" />
+                            <img src="<?php echo esc_url($header_logo['url']); ?>" alt="<?php echo esc_attr($header_logo['alt']); ?>"  width="100%" height="auto" />
                         </picture>
+
                     </a>
+
                 <?php endif; ?>
 
                 <div class="header__navbar">

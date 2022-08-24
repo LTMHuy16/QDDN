@@ -48,7 +48,7 @@
                                                 <div class="hero__icon">
                                                     <picture>
 
-                                                        <img src="<?php echo esc_url($intro_icon['url']) ?>" alt="<?php echo esc_attr($intro_icon['alt']) ?>">
+                                                        <img src="<?php echo esc_url($intro_icon['url']) ?>" alt="<?php echo esc_attr($intro_icon['alt']) ?>" width="100" height="100">
 
                                                     </picture>
                                                 </div>
@@ -105,7 +105,7 @@
                     <div class="hero__ilustration">
                         <picture>
 
-                            <img src="<?php echo esc_url($bg_img['url']) ?>" alt="<?php echo esc_attr($bg_img['alt']) ?>" />
+                            <img  src="<?php echo esc_url($bg_img['url']) ?>" alt="<?php echo esc_attr($bg_img['alt']) ?>" width="100%" height="auto"/>
 
                         </picture>
                     </div>

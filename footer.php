@@ -139,7 +139,7 @@
 
 							<picture>
 
-								<img src="<?php echo esc_url($logo_img['url']); ?>" alt="<?php echo esc_attr($logo_img['alt']); ?>" />
+								<img src="<?php echo esc_url($logo_img['url']); ?>" alt="<?php echo esc_attr($logo_img['alt']); ?>"  width="100%" height="auto" />
 
 							</picture>
 

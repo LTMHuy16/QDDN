@@ -67,7 +67,7 @@
 
                                     <picture class="service__img">
 
-                                        <img src="<?php echo esc_url($icon); ?>" alt="card-icon" />
+                                        <img src="<?php echo esc_url($icon); ?>" alt="card-icon" width="100%" height="auto"/>
 
                                     </picture>
 
@@ -117,7 +117,7 @@
 
                                     <picture class="service__img">
 
-                                        <img src="<?php echo esc_url($icon); ?>" alt="card-iconcard-icon" />
+                                        <img src="<?php echo esc_url($icon); ?>" alt="card-iconcard-icon" width="100%" height="auto"/>
 
                                     </picture>
 
@@ -164,7 +164,7 @@
 
                                     <picture class="service__img">
 
-                                        <img src="<?php echo esc_url($icon); ?>" alt="card-icon" />
+                                        <img src="<?php echo esc_url($icon); ?>" alt="card-icon" width="100%" height="auto" />
 
                                     </picture>
 
@@ -214,7 +214,7 @@
 
                                     <picture class="service__img">
 
-                                        <img src="<?php echo esc_url($icon); ?>" alt="card-icon" />
+                                        <img src="<?php echo esc_url($icon); ?>" alt="card-icon"  width="100%" height="auto" />
 
                                     </picture>
 
