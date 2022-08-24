@@ -21,7 +21,6 @@ remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_head', 'wp_oembed_add_host_js' );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
-
 /**
  * SET UP CSS FILES
  */
@@ -32,7 +31,8 @@ function qdn_styles() {
     wp_dequeue_style( 'global-styles' );
 
 
-	wp_enqueue_style( 'font-icon', get_stylesheet_directory_uri() . '/assets/css/brands.min.css' );
+	wp_enqueue_style( 'font-icon-brands', get_stylesheet_directory_uri() . '/assets/css/icons/brands.min.css' );
+
 	wp_enqueue_style( 'base', get_stylesheet_directory_uri() . '/assets/css/base.min.css' );
 }
 
